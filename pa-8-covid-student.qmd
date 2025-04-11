@@ -169,7 +169,7 @@ cases |>
   summarize(sum_cases = sum(cases_daily, na.rm = TRUE)) |> 
   ggplot() +
   geom_col(aes(x = month, y = sum_cases, fill = month)) +
-  labs(x = "Month of 2022", y = "Number of Cases Recorded", title = "COVID Cases in California in 2022") +
+  labs(x = "Month of 2022", y = "Number of Cases Recorded", title = "COVID Cases in California in 2022", subtitle = "What month had the most COVID cases in California in 2022?") +
   scale_fill_viridis_d(option = "turbo") +
   guides(fill = "none") 
   ggsave("COVID_cases_2022.png", device = "png")
